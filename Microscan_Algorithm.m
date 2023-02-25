@@ -51,7 +51,7 @@
 
 %% physical signal
 
-    offset = [0.0 0.0];
+    offset = [0.25 0.25];
     physical_signal_1 = generate_sensor_signal([res_Y res_X], oversample_ratio, offset, [-0.25 -0.25], depth_map, T_0);
     physical_signal_2 = generate_sensor_signal([res_Y res_X], oversample_ratio, offset, [0.25 -0.25], depth_map, T_0);
     physical_signal_3 = generate_sensor_signal([res_Y res_X], oversample_ratio, offset, [-0.25 0.25], depth_map, T_0);
@@ -172,7 +172,7 @@
     imshow(superres_signal_supp_iter.intensity,[0 Inf]);
     colorbar;
     daspect([1 1 1]);
-    title("Super-res iterative intensity");
+    title("Super-res iterative suppressed intensity");
 
     % principle
     figure('Name','Signal Sample','NumberTitle','off');
